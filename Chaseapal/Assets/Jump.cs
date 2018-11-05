@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour {
 
     // Håller koll på att hoppa
+    public string jumpButton = "Jump";
 
     Rigidbody2D Rb2d;
     float jumpMaxTime;
@@ -22,7 +23,7 @@ public class Jump : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown(jumpButton) && !isJumping)
         {
             isJumping = true;
             jumpMaxTime = Time.time + 0.55f;
@@ -30,7 +31,7 @@ public class Jump : MonoBehaviour {
             jumpPower = 1.0f;
         }
 
-        if (Input.GetButton("Jump") && Time.time < jumpMaxTime)
+        if (Input.GetButton(jumpButton) && Time.time < jumpMaxTime)
         {
             jumpTime += Time.deltaTime;
             Rb2d.velocity = new Vector2(Rb2d.velocity.x, jumpPower);
@@ -46,7 +47,7 @@ public class Jump : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp(jumpButton))
         {
             jumpMaxTime = 0;
         }

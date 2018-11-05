@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
     // Röra sig sideleds
-
+    public string inputMovment = "Horizontal";
     Rigidbody2D rb2d;
     SpriteRenderer sprite;
     // Use this for initialization
@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float x = Input.GetAxis("Horizontal") *5;
+        float x = Input.GetAxis(inputMovment) *5;
 
 
         //Animering av ändra håll
