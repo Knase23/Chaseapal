@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+    // Röra sig sideleds
+
     Rigidbody2D rb2d;
     SpriteRenderer sprite;
     // Use this for initialization

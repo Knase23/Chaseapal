@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour {
 
+    // Håller koll på att hoppa
+
     Rigidbody2D Rb2d;
     float jumpMaxTime;
     float jumpTime;
