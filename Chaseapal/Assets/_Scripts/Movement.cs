@@ -5,26 +5,28 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
     // Röra sig sideleds
-    public string inputMovment = "Horizontal";
+    public string inputMovement = "Horizontal";
     Rigidbody2D rb2d;
+    public Animator animator;
     SpriteRenderer sprite;
     // Use this for initialization
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-	}
+        animator = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        float x = Input.GetAxis(inputMovment) *5;
+        float x = Input.GetAxis(inputMovement) *5;
 
-
+        animator.SetFloat("Speed", Mathf.Abs(x));
         //Animering av ändra håll
         if(x < 0)
         {
             sprite.flipX = true;
         }
-        else
+        if (x > 0)
         {
             sprite.flipX = false;
         }
