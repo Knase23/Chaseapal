@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour {
 
-    int[] pointsList;
+    static int[] pointsList;
 	// Use this for initialization
 	void Start () {
-        pointsList = new int[4];
+        if (gameObject.scene.name == "Menu")
+        {
+            pointsList = new int[4];
+        }
 	}
 	
 	// Update is called once per frame

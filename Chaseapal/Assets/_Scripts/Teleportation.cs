@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Teleportation : MonoBehaviour {
 
-    float screenHeight = Screen.height;
+    //float screenHeight = Screen.height;
 
 	// Use this for initialization
 	void Start () {
