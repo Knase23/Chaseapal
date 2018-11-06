@@ -13,16 +13,15 @@ public class Jump : MonoBehaviour {
     float jumpPower;
     public bool isJumping;
 
-    // Use this for initialization
-    void Start()
-    {
-        Rb2d = GetComponentInChildren<Rigidbody2D>();
-        Rb2d.gravityScale = 2;
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if(Rb2d == null)
+        {
+            Rb2d = GetComponentInChildren<Rigidbody2D>();
+            Rb2d.gravityScale = 2;
+        }
+
         if (Input.GetButtonDown(jumpButton) && !isJumping)
         {
             isJumping = true;

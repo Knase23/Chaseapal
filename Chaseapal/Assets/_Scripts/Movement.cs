@@ -8,18 +8,29 @@ public class Movement : MonoBehaviour {
     public string inputMovement = "Horizontal";
     Rigidbody2D rb2d;
     CustomAnimation customAnimation;
-    SpriteRenderer sprite;
-    // Use this for initialization
-    void Start () {
-        rb2d = GetComponentInChildren<Rigidbody2D>(); 
-        sprite = GetComponentInChildren<SpriteRenderer>();
-        customAnimation = GetComponentInChildren<CustomAnimation>();
-
-
-    }
-	
+    SpriteRenderer sprite;	
 	// Update is called once per frame
 	void Update () {
+
+
+        if(rb2d == null)
+        {
+            rb2d = GetComponentInChildren<Rigidbody2D>();
+            
+            
+        }
+        if (sprite == null)
+        {
+            sprite = GetComponentInChildren<SpriteRenderer>();
+        }
+        if(customAnimation == null)
+        {
+            customAnimation = GetComponentInChildren<CustomAnimation>();
+        }
+
+
+
+
         float x = Input.GetAxis(inputMovement) * 5;
 
         customAnimation.speed = Mathf.Abs(x);

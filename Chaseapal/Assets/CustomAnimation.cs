@@ -10,7 +10,6 @@ public class CustomAnimation : MonoBehaviour {
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
-        parentJump = GetComponentInParent<Jump>();
     }
 	
 	// Update is called once per frame
@@ -20,6 +19,10 @@ public class CustomAnimation : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (parentJump == null)
+        {
+            parentJump = GetComponentInParent<Jump>();
+        }
         parentJump.isJumping = false;
     }
 }
