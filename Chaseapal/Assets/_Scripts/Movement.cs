@@ -7,20 +7,22 @@ public class Movement : MonoBehaviour {
     // Röra sig sideleds
     public string inputMovement = "Horizontal";
     Rigidbody2D rb2d;
-    public Animator animator;
+    CustomAnimation customAnimation;
     SpriteRenderer sprite;
     // Use this for initialization
     void Start () {
-        rb2d = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        rb2d = GetComponentInChildren<Rigidbody2D>(); 
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        customAnimation = GetComponentInChildren<CustomAnimation>();
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
         float x = Input.GetAxis(inputMovement) * 5;
 
-        animator.SetFloat("Speed", Mathf.Abs(x));
+        customAnimation.speed = Mathf.Abs(x);
         //Animering av ändra håll
         if(x < 0)
         {

@@ -16,7 +16,7 @@ public class Jump : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Rb2d = GetComponent<Rigidbody2D>();
+        Rb2d = GetComponentInChildren<Rigidbody2D>();
         Rb2d.gravityScale = 2;
     }
 
@@ -51,10 +51,5 @@ public class Jump : MonoBehaviour {
         {
             jumpMaxTime = 0;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        isJumping = false;
     }
 }
