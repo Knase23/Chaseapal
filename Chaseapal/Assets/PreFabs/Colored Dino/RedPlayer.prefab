@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114232255005840620}
   - component: {fileID: 95548670975765810}
   - component: {fileID: 114089035491102256}
+  - component: {fileID: 114960608042107404}
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Player
@@ -226,6 +227,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.7411765, g: 0.3019608, b: 0.32156864, a: 1}
+--- !u!114 &114960608042107404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840457976979806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7042b5becfef8b41b815fc27d0fef29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerStart: 0
 --- !u!212 &212921028785639404
 SpriteRenderer:
   m_ObjectHideFlags: 1
