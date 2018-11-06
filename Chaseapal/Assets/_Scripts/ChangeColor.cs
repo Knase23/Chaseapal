@@ -13,11 +13,12 @@ public class ChangeColor : MonoBehaviour {
     // Kanske startar om timern - Diskutera om det
 
     //När timern är slut, då försvinner den
-
+    Color defaultColor;
     SpriteRenderer sprite;
     // Use this for initialization
     void Start () {
         sprite = GetComponent<SpriteRenderer>();
+        defaultColor = sprite.color;
     }
 	
 	// Update is called once per frame
@@ -28,5 +29,20 @@ public class ChangeColor : MonoBehaviour {
     {
         Color other = collision.GetComponent<ColorVar>().color;
         sprite.color = other;
+    }
+    public bool IsColorChanged()
+    {
+        if (sprite.color != defaultColor)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void ColorDefualtChange()
+    {
+        sprite.color = defaultColor;
     }
 }
