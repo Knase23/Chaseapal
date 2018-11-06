@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61735596865624076}
   - component: {fileID: 68800686200299652}
   - component: {fileID: 114496307794689514}
+  - component: {fileID: 114007646171589788}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -103,6 +104,20 @@ EdgeCollider2D:
   m_Points:
   - {x: 0, y: 0.12}
   - {x: 0.24, y: 0.12}
+--- !u!114 &114007646171589788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100285428728134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 1
+  ableToRespawn: 1
 --- !u!114 &114496307794689514
 MonoBehaviour:
   m_ObjectHideFlags: 1
