@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float x = Input.GetAxis(inputMovement) *5;
+        float x = Input.GetAxis(inputMovement) * 5;
 
         animator.SetFloat("Speed", Mathf.Abs(x));
         //Animering av ändra håll
