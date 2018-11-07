@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 61207432443503410}
   - component: {fileID: 68190489224524950}
   - component: {fileID: 114404769922799528}
+  - component: {fileID: 114683973585649820}
   m_Layer: 0
   m_Name: Ground (21)
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   - component: {fileID: 61303486449260194}
   - component: {fileID: 68490980143104158}
   - component: {fileID: 114297755069855532}
+  - component: {fileID: 114420234085292428}
   m_Layer: 0
   m_Name: Ground (22)
   m_TagString: Untagged
@@ -247,6 +249,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bbcb640c8b08647946290c6f4f2281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114420234085292428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160285866298962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 5
+  ableToRespawn: 1
+--- !u!114 &114683973585649820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089772863077600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 5
+  ableToRespawn: 1
 --- !u!212 &212449502827352714
 SpriteRenderer:
   m_ObjectHideFlags: 1

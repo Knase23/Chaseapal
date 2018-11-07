@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61980401585417240}
   - component: {fileID: 68832839340756852}
   - component: {fileID: 114774886471171560}
+  - component: {fileID: 114041903538000970}
   m_Layer: 0
   m_Name: Ground (2)
   m_TagString: Untagged
@@ -44,6 +45,7 @@ GameObject:
   - component: {fileID: 61072999126815406}
   - component: {fileID: 68440270773647894}
   - component: {fileID: 114588777998020018}
+  - component: {fileID: 114574663996661952}
   m_Layer: 0
   m_Name: Ground (3)
   m_TagString: Untagged
@@ -64,6 +66,7 @@ GameObject:
   - component: {fileID: 61672610226463502}
   - component: {fileID: 68720463621474042}
   - component: {fileID: 114339205440219326}
+  - component: {fileID: 114338599684177948}
   m_Layer: 0
   m_Name: Ground (1)
   m_TagString: Untagged
@@ -318,6 +321,34 @@ EdgeCollider2D:
   m_Points:
   - {x: 0, y: 0.12}
   - {x: 0.24, y: 0.12}
+--- !u!114 &114041903538000970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016107573914118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 5
+  ableToRespawn: 1
+--- !u!114 &114338599684177948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344574798091792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 5
+  ableToRespawn: 1
 --- !u!114 &114339205440219326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,6 +360,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bbcb640c8b08647946290c6f4f2281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114574663996661952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337120887770734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ad3c000e367844a8791c9cebe7b2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTime: 3
+  enableTime: 5
+  ableToRespawn: 1
 --- !u!114 &114588777998020018
 MonoBehaviour:
   m_ObjectHideFlags: 1
