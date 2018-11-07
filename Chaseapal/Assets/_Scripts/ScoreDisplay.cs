@@ -20,7 +20,6 @@ public class ScoreDisplay : MonoBehaviour {
         score = ScoreSystem.pointsList[playerNumber];
         Pos = transform.position;
         CheckPersentage();
-        DisplayText();  
     }
 
     private void Update() {
@@ -60,6 +59,7 @@ public class ScoreDisplay : MonoBehaviour {
 
             if (transform.position.y  > (4f * persentage) - 5f) {
                 atTop = true;
+                DisplayText();
             }
         }
     }
