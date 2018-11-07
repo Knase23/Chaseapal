@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SelectMenuItem : MonoBehaviour {
 
-    public string toView;
+    public string enterToView;
+    public string cancelToView;
     public Camera mainCamera;
-    Animator cameraAnimator;
     float timer = 2;
     Animator animateController;
-	// Use this for initialization
-	void Start () {
+    SetAnimatiorStates changeStatesTo;
+    bool charactherInside;
+    // Use this for initialization
+    void Start () {
         animateController = GetComponent<Animator>();
-        cameraAnimator = mainCamera.GetComponent<Animator>();
+        changeStatesTo = mainCamera.gameObject.GetComponent<SetAnimatiorStates>();
     }
 	
 	// Update is called once per frame
@@ -22,66 +24,40 @@ public class SelectMenuItem : MonoBehaviour {
         {
             timer += Time.deltaTime;
         }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (timer > 2)
+        if (timer > 2 && charactherInside)
         {
-            
+
             if (Input.GetAxis("Submit") > 0)
             {
-                Debug.Log("Submited " + toView);
+                Debug.Log("Submited to " + enterToView);
                 animateController.SetBool("Selected", true);
+                changeStatesTo.SetState(enterToView, true);
                 timer = 0;
                 //mainCamera.transform.Translate();
             }
 
             if (Input.GetAxis("Cancel") > 0)
             {
-                Debug.Log("Cancel " + toView);
+                Debug.Log("Cancel to " + cancelToView);
                 animateController.SetBool("Selected", false);
+                changeStatesTo.SetState(cancelToView, true);
                 timer = 0;
                 //mainCamera.transform.Translate();
             }
-            
-        }        
+
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        charactherInside = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        charactherInside = false;
     }
 
-    void IdleMain()
-    {
-        animateController.SetBool("Main", true);
-    }
-    void IdleAbout()
-    {
-        animateController.SetBool("About", true);
-    }
-    void IdleLevelSelect()
-    {
-        animateController.SetBool("LevelSelect", true);
-    }
-    void IdlePlayerConnect()
-    {
-        animateController.SetBool("PlayerConnect", true);
-    }
-    void GoMainToLevelSelect()
-    {
-        animateController.SetBool("Main", true);
-        animateController.SetBool("LevelSelect", true);
-        animateController.SetBool("PlayerConnect", false);
-        animateController.SetBool("Settings", false);
-        animateController.SetBool("About", false);
-    }
-    void GoMainToSettings()
-    {
-        animateController.SetBool("Main", true);
-        animateController.SetBool("Settings", true);
-    }
-    void GoMainToAbout()
-    {
-        animateController.SetBool("Main", true);
-        animateController.SetBool("Settings", true);
-    }
-   
+
+
 
 
 
