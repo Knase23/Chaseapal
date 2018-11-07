@@ -20,11 +20,11 @@ public class SelectMenuItem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (timer < 3)
+        if (timer < 2)
         {
             timer += Time.deltaTime;
         }
-        if (timer > 2 && charactherInside)
+        if (timer > 1 && charactherInside)
         {
 
             if (Input.GetAxis("Submit") > 0)
