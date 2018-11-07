@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 217505544}
   - component: {fileID: 217505543}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Cam2P
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 423956460}
   - component: {fileID: 423956459}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Cam3P
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 508761124}
   - component: {fileID: 508761123}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Cam4P
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
