@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectColor : MonoBehaviour {
 
     public string color = "blue";
+    public int playerNumber;
 
     public GameObject blueDino;
     public GameObject greenDino;

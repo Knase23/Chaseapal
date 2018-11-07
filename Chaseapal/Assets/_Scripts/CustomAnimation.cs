@@ -6,10 +6,12 @@ public class CustomAnimation : MonoBehaviour {
 
     public float speed;
     public Animator animator;
+    AudioSource sound;
     Jump parentJump;
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
+        
     }
 	
 	// Update is called once per frame
@@ -24,5 +26,6 @@ public class CustomAnimation : MonoBehaviour {
             parentJump = GetComponentInParent<Jump>();
         }
         parentJump.isJumping = false;
+
     }
 }

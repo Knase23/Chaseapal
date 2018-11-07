@@ -8,6 +8,8 @@ public class SelectMenuItem : MonoBehaviour {
     public string cancelToView;
     public Camera mainCamera;
     float timer = 2;
+    bool isVisible;
+    bool isInTransition;
     Animator animateController;
     SetAnimatiorStates changeStatesTo;
     bool charactherInside;
@@ -24,7 +26,7 @@ public class SelectMenuItem : MonoBehaviour {
         {
             timer += Time.deltaTime;
         }
-        if (timer > 1 && charactherInside)
+        if (timer > 1 && charactherInside && isVisible)
         {
 
             if (Input.GetAxis("Submit") > 0)
@@ -32,8 +34,8 @@ public class SelectMenuItem : MonoBehaviour {
                 Debug.Log("Submited to " + enterToView);
                 animateController.SetBool("Selected", true);
                 changeStatesTo.SetState(enterToView, true);
+                isInTransition = true;
                 timer = 0;
-                //mainCamera.transform.Translate();
             }
 
             if (Input.GetAxis("Cancel") > 0)
@@ -41,8 +43,9 @@ public class SelectMenuItem : MonoBehaviour {
                 Debug.Log("Cancel to " + cancelToView);
                 animateController.SetBool("Selected", false);
                 changeStatesTo.SetState(cancelToView, true);
+                isInTransition = true;
                 timer = 0;
-                //mainCamera.transform.Translate();
+                
             }
 
         }
@@ -55,7 +58,15 @@ public class SelectMenuItem : MonoBehaviour {
     {
         charactherInside = false;
     }
-
+    private void OnBecameVisible()
+    {
+        isVisible = true;
+    }
+    private void OnBecameInvisible()
+    {
+        isVisible = false;
+        isInTransition = false;
+    }
 
 
 

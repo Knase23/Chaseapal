@@ -13,12 +13,6 @@ public class MenuOptionChanger : MonoBehaviour {
         
         defaultColor = sprite.color;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Color other = collision.gameObject.GetComponent<ColorVar>().color;
