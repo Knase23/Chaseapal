@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class GetColor : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    Color color;
+    SpriteRenderer sprite;
+  
+    void Start() {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update() {
+        color = GetComponentInParent<SpriteRenderer>().color;
+        sprite.color = color
+    }
 }
