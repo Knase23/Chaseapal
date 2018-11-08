@@ -7,25 +7,33 @@ public class CameraController : MonoBehaviour {
     public Camera cam2P;
     public Camera cam3P;
     public Camera cam4P;
-    bool is2P = false;
-    bool is3P = false;
-    bool is4P = true;
+
+    int numberOfPlayers = 0;
+
 
     // Use this for initialization
     void Start () {
-        if (is2P){ 
+
+        for(int i = 0; i < 4; i++) {
+            if (SpawnPlayers.arrayOfShouldSpawn[i])
+                numberOfPlayers++;
+        }
+        
+
+
+        if (numberOfPlayers == 2){ 
 
             cam2P.enabled = true;
             cam3P.enabled = false;
             cam4P.enabled = false;
 
-        } else if (is3P){
+        } else if (numberOfPlayers == 3) {
 
             cam2P.enabled = false;
             cam3P.enabled = true;
             cam4P.enabled = false;
 
-        } else if (is4P){
+        } else if (numberOfPlayers == 4) {
 
             cam2P.enabled = false;
             cam3P.enabled = false;
