@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 146115095}
   - component: {fileID: 146115094}
   - component: {fileID: 146115093}
-  - component: {fileID: 146115092}
   - component: {fileID: 146115091}
   m_Layer: 0
   m_Name: fill_p3
@@ -158,20 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &146115092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 146115089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &146115093
 Animator:
   serializedVersion: 3
@@ -259,7 +244,6 @@ GameObject:
   - component: {fileID: 173682299}
   - component: {fileID: 173682298}
   - component: {fileID: 173682297}
-  - component: {fileID: 173682296}
   - component: {fileID: 173682295}
   - component: {fileID: 173682301}
   m_Layer: 0
@@ -297,20 +281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &173682296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 173682293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &173682297
 Animator:
   serializedVersion: 3
@@ -510,7 +480,6 @@ GameObject:
   - component: {fileID: 203053815}
   - component: {fileID: 203053814}
   - component: {fileID: 203053813}
-  - component: {fileID: 203053812}
   - component: {fileID: 203053811}
   m_Layer: 0
   m_Name: fill_p2
@@ -544,20 +513,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &203053812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 203053809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &203053813
 Animator:
   serializedVersion: 3
@@ -642,7 +597,6 @@ GameObject:
   m_Component:
   - component: {fileID: 217505545}
   - component: {fileID: 217505544}
-  - component: {fileID: 217505543}
   m_Layer: 0
   m_Name: Cam2P
   m_TagString: MainCamera
@@ -650,13 +604,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &217505543
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 217505542}
-  m_Enabled: 1
 --- !u!20 &217505544
 Camera:
   m_ObjectHideFlags: 0
@@ -753,6 +700,16 @@ Prefab:
       propertyPath: m_Name
       value: Player 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114031994128545578, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114833071189543330, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31d5b34352ced24b9cfa39b3c45da7c, type: 2}
   m_IsPrefabAsset: 0
@@ -799,6 +756,16 @@ Prefab:
       propertyPath: m_Name
       value: Player 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114113888033678782, guid: ad82291a636833546a2098cc3c8fd11f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422238127155976, guid: ad82291a636833546a2098cc3c8fd11f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad82291a636833546a2098cc3c8fd11f, type: 2}
   m_IsPrefabAsset: 0
@@ -814,7 +781,6 @@ GameObject:
   - component: {fileID: 410182240}
   - component: {fileID: 410182239}
   - component: {fileID: 410182238}
-  - component: {fileID: 410182237}
   - component: {fileID: 410182236}
   - component: {fileID: 410182242}
   m_Layer: 0
@@ -852,20 +818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
---- !u!114 &410182237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410182234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &410182238
 Animator:
   serializedVersion: 3
@@ -986,7 +938,6 @@ GameObject:
   m_Component:
   - component: {fileID: 423956461}
   - component: {fileID: 423956460}
-  - component: {fileID: 423956459}
   m_Layer: 0
   m_Name: Cam3P
   m_TagString: MainCamera
@@ -994,13 +945,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &423956459
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423956458}
-  m_Enabled: 1
 --- !u!20 &423956460
 Camera:
   m_ObjectHideFlags: 0
@@ -1401,7 +1345,6 @@ GameObject:
   - component: {fileID: 578104621}
   - component: {fileID: 578104620}
   - component: {fileID: 578104619}
-  - component: {fileID: 578104618}
   - component: {fileID: 578104617}
   - component: {fileID: 578104623}
   m_Layer: 0
@@ -1439,20 +1382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
---- !u!114 &578104618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 578104615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &578104619
 Animator:
   serializedVersion: 3
@@ -1576,7 +1505,6 @@ GameObject:
   - component: {fileID: 603054196}
   - component: {fileID: 603054195}
   - component: {fileID: 603054194}
-  - component: {fileID: 603054193}
   - component: {fileID: 603054192}
   - component: {fileID: 603054198}
   m_Layer: 0
@@ -1614,20 +1542,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &603054193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 603054190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &603054194
 Animator:
   serializedVersion: 3
@@ -1805,7 +1719,6 @@ GameObject:
   - component: {fileID: 677095663}
   - component: {fileID: 677095662}
   - component: {fileID: 677095661}
-  - component: {fileID: 677095660}
   - component: {fileID: 677095659}
   - component: {fileID: 677095665}
   m_Layer: 0
@@ -1843,20 +1756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
---- !u!114 &677095660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 677095657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &677095661
 Animator:
   serializedVersion: 3
@@ -2091,7 +1990,6 @@ GameObject:
   - component: {fileID: 808333391}
   - component: {fileID: 808333390}
   - component: {fileID: 808333389}
-  - component: {fileID: 808333388}
   - component: {fileID: 808333387}
   m_Layer: 0
   m_Name: fill_p2
@@ -2125,20 +2023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &808333388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808333385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &808333389
 Animator:
   serializedVersion: 3
@@ -2225,7 +2109,6 @@ GameObject:
   - component: {fileID: 867626139}
   - component: {fileID: 867626137}
   - component: {fileID: 867626136}
-  - component: {fileID: 867626135}
   - component: {fileID: 867626134}
   - component: {fileID: 867626138}
   m_Layer: 0
@@ -2260,20 +2143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &867626135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867626132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &867626136
 Animator:
   serializedVersion: 3
@@ -2453,6 +2322,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114113888033678782, guid: ad82291a636833546a2098cc3c8fd11f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422238127155976, guid: ad82291a636833546a2098cc3c8fd11f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad82291a636833546a2098cc3c8fd11f, type: 2}
   m_IsPrefabAsset: 0
@@ -2495,6 +2374,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114031994128545578, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114833071189543330, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31d5b34352ced24b9cfa39b3c45da7c, type: 2}
   m_IsPrefabAsset: 0
@@ -2509,7 +2398,6 @@ GameObject:
   - component: {fileID: 1052102443}
   - component: {fileID: 1052102442}
   - component: {fileID: 1052102441}
-  - component: {fileID: 1052102440}
   - component: {fileID: 1052102439}
   m_Layer: 0
   m_Name: fill_p1
@@ -2543,20 +2431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &1052102440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052102437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1052102441
 Animator:
   serializedVersion: 3
@@ -2643,7 +2517,6 @@ GameObject:
   - component: {fileID: 1061793184}
   - component: {fileID: 1061793182}
   - component: {fileID: 1061793181}
-  - component: {fileID: 1061793180}
   - component: {fileID: 1061793179}
   m_Layer: 0
   m_Name: fill_p3
@@ -2677,20 +2550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &1061793180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1061793177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1061793181
 Animator:
   serializedVersion: 3
@@ -2884,6 +2743,16 @@ Prefab:
       propertyPath: m_Name
       value: Player 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114910162161770278, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102175843632390, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
   m_IsPrefabAsset: 0
@@ -2952,7 +2821,6 @@ GameObject:
   - component: {fileID: 1129649703}
   - component: {fileID: 1129649701}
   - component: {fileID: 1129649700}
-  - component: {fileID: 1129649699}
   - component: {fileID: 1129649698}
   m_Layer: 0
   m_Name: fill_p4
@@ -2986,20 +2854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &1129649699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1129649696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1129649700
 Animator:
   serializedVersion: 3
@@ -3409,7 +3263,6 @@ GameObject:
   - component: {fileID: 1465238283}
   - component: {fileID: 1465238282}
   - component: {fileID: 1465238281}
-  - component: {fileID: 1465238280}
   - component: {fileID: 1465238279}
   - component: {fileID: 1465238285}
   m_Layer: 0
@@ -3447,20 +3300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
---- !u!114 &1465238280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1465238277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1465238281
 Animator:
   serializedVersion: 3
@@ -3661,7 +3500,6 @@ GameObject:
   - component: {fileID: 1487275637}
   - component: {fileID: 1487275636}
   - component: {fileID: 1487275635}
-  - component: {fileID: 1487275634}
   - component: {fileID: 1487275633}
   - component: {fileID: 1487275639}
   m_Layer: 0
@@ -3699,20 +3537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &1487275634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1487275631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1487275635
 Animator:
   serializedVersion: 3
@@ -3867,6 +3691,16 @@ Prefab:
       propertyPath: m_Name
       value: Player 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114031994128545578, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114833071189543330, guid: f31d5b34352ced24b9cfa39b3c45da7c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31d5b34352ced24b9cfa39b3c45da7c, type: 2}
   m_IsPrefabAsset: 0
@@ -4007,6 +3841,16 @@ Prefab:
     - target: {fileID: 1476973594284582, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
       propertyPath: m_Name
       value: Player 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114910162161770278, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102175843632390, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
@@ -4473,6 +4317,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114712830687868306, guid: 0033dd4e253e2ef49b763fb442c3e86b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349642909559514, guid: 0033dd4e253e2ef49b763fb442c3e86b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0033dd4e253e2ef49b763fb442c3e86b, type: 2}
   m_IsPrefabAsset: 0
@@ -4542,7 +4396,6 @@ GameObject:
   - component: {fileID: 2073886773}
   - component: {fileID: 2073886772}
   - component: {fileID: 2073886771}
-  - component: {fileID: 2073886770}
   - component: {fileID: 2073886769}
   - component: {fileID: 2073886775}
   m_Layer: 0
@@ -4580,20 +4433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 3
---- !u!114 &2073886770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2073886767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &2073886771
 Animator:
   serializedVersion: 3
@@ -4716,7 +4555,6 @@ GameObject:
   - component: {fileID: 2083663715}
   - component: {fileID: 2083663713}
   - component: {fileID: 2083663712}
-  - component: {fileID: 2083663711}
   - component: {fileID: 2083663710}
   m_Layer: 0
   m_Name: fill_p2
@@ -4750,20 +4588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &2083663711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2083663708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &2083663712
 Animator:
   serializedVersion: 3
@@ -4878,6 +4702,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114910162161770278, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102175843632390, guid: 7f0bd36b880217d4c8df5b3983d62f13,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
   m_IsPrefabAsset: 0
@@ -4892,7 +4726,6 @@ GameObject:
   - component: {fileID: 2087069264}
   - component: {fileID: 2087069263}
   - component: {fileID: 2087069262}
-  - component: {fileID: 2087069261}
   - component: {fileID: 2087069260}
   m_Layer: 0
   m_Name: fill_p1
@@ -4926,20 +4759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
---- !u!114 &2087069261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087069258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &2087069262
 Animator:
   serializedVersion: 3
@@ -5027,7 +4846,6 @@ GameObject:
   - component: {fileID: 2136478981}
   - component: {fileID: 2136478980}
   - component: {fileID: 2136478979}
-  - component: {fileID: 2136478978}
   - component: {fileID: 2136478977}
   - component: {fileID: 2136478983}
   m_Layer: 0
@@ -5065,20 +4883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
---- !u!114 &2136478978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2136478975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3ded2e842ff984999bf4ee9ab8eb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterToView: 
-  cancelToView: 
-  mainCamera: {fileID: 0}
 --- !u!95 &2136478979
 Animator:
   serializedVersion: 3
