@@ -64,6 +64,9 @@ public class ScoreDisplay : MonoBehaviour {
     }
 
     void DisplayText() {
-        text.text = "" + score;
+        if (text != null)
+        {
+            text.text = "" + ScoreSystem.pointsList[playerNumber];
+        }
     }
 }
