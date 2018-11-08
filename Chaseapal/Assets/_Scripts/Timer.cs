@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour {
         }
 	}
 
-    private bool GetIsAnyTimeLeft() {
+    public bool GetIsAnyTimeLeft() {
         return isAnyTimeLeft;
     }
 }

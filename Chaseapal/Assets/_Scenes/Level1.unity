@@ -5069,7 +5069,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732317474}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -5088,7 +5088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89cc4cf276c12b4d95a36b9ffcade49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 50
+  startingTime: 5
 --- !u!114 &397958026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12256,6 +12256,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5718057a9558fd4592c7cca7c607eaf, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &868463095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868463096}
+  - component: {fileID: 868463097}
+  m_Layer: 0
+  m_Name: VictoryScreenLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868463096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868463095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -582.0776, y: -327.512, z: 92.89203}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1732317474}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868463097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868463095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df15f19a14e267b429f3355e7d5e2d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 397958025}
 --- !u!1001 &872241411
 Prefab:
   m_ObjectHideFlags: 0
@@ -22598,6 +22639,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 868463096}
   - {fileID: 397958024}
   m_Father: {fileID: 1859446934}
   m_RootOrder: 0

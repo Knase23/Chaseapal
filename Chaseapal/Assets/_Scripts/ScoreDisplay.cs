@@ -52,7 +52,6 @@ public class ScoreDisplay : MonoBehaviour {
         //float refScore =  highScore / 10;
         float persentage =  (float)score / (float)highScore;
         
-        Debug.Log("persentage " + persentage);
 
         if (!atTop) {
             transform.Translate(0, 0.01f, 0);
