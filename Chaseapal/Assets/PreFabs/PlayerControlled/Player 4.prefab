@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: yellow
+  playerNumber: 3
   blueDino: {fileID: 1032018740437026, guid: ca0cf4ad0a1768f46b5896bd93884908, type: 2}
   greenDino: {fileID: 1720731708366020, guid: a1b34fa2e17fc0645aacf901d8f0ac24, type: 2}
   redDino: {fileID: 1840457976979806, guid: f69b0adda48304941a14e70d3f18b0aa, type: 2}

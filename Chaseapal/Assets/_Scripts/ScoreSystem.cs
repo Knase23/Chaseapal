@@ -16,7 +16,7 @@ public class ScoreSystem : MonoBehaviour {
 		
 	}
 
-    public void AddPointToPlayer(int playerNumber)
+    public static void AddPointToPlayer(int playerNumber)
     {
         pointsList[playerNumber]++;
     }

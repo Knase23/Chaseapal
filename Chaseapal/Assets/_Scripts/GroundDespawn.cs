@@ -8,6 +8,7 @@ public class GroundDespawn : MonoBehaviour {
     public float disableTime = 3;
     public float enableTime = 1;
     public bool ableToRespawn = true;
+    bool isDisabled;
     float timer = 0;
     ChangeColor chaneCol;
     SpriteRenderer sprite;
@@ -27,14 +28,17 @@ public class GroundDespawn : MonoBehaviour {
         if (chaneCol.IsColorChanged())
         {
             timer += Time.deltaTime;
-            if(timer > disableTime)
+            if(timer > disableTime &&  !isDisabled)
             {
+                isDisabled = true;
                 DisableComponents();
+                ScoreSystem.AddPointToPlayer(chaneCol.GetPlayerNumber());
 
             }
 
-            if(timer > disableTime + enableTime && ableToRespawn)
+            if(timer > disableTime + enableTime && ableToRespawn && isDisabled)
             {
+                isDisabled = false;
                 EnableComponents();
                 chaneCol.ColorDefualtChange();
                 timer = 0;

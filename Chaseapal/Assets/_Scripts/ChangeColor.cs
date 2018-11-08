@@ -15,6 +15,7 @@ public class ChangeColor : MonoBehaviour {
     //När timern är slut, då försvinner den
     Color defaultColor;
     SpriteRenderer sprite;
+    int playerNumber;
     // Use this for initialization
     void Start () {
         sprite = GetComponent<SpriteRenderer>();
@@ -24,8 +25,13 @@ public class ChangeColor : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Color other = collision.GetComponent<ColorVar>().color;
-        sprite.color = other;
+        if (collision.tag == "Player")
+        {
+
+            ColorVar other = collision.GetComponent<ColorVar>();
+            sprite.color = other.color;
+            playerNumber = other.playerNumber;
+        }
     }
     public bool IsColorChanged()
     {
@@ -41,5 +47,9 @@ public class ChangeColor : MonoBehaviour {
     public void ColorDefualtChange()
     {
         sprite.color = defaultColor;
+    }
+    public int GetPlayerNumber()
+    {
+        return playerNumber;
     }
 }
