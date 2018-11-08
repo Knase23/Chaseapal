@@ -35,5 +35,11 @@ public class Freeze : MonoBehaviour {
         } else if (timer > 0) {
             timer = 0;
         }
+
+        if (jump.isJumping) {
+            animator.SetBool("IsJumping", true);
+        } else {
+            animator.SetBool("IsJumping", false);
+        }
     }
 }
