@@ -64,8 +64,11 @@ public class SelectColor : MonoBehaviour {
                 Instantiate(blueDino, gameObject.transform);
                 break;
         }
-        SpawnPlayers.arrayOfSelectedColors[playerNumber] = color;
-        dinoIsSpawned = true;
+        if (playerNumber < SpawnPlayers.arrayOfSelectedColors.Length)
+        {
+            SpawnPlayers.arrayOfSelectedColors[playerNumber] = color;
+        }
+            dinoIsSpawned = true;
     }
     public void killDino()
     {

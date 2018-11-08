@@ -43,7 +43,7 @@ public class PlayerConnectController : MonoBehaviour {
         {
             float x = Input.GetAxis("Horizontal");
             float submit = Input.GetAxis("Submit");
-            float cancel = Input.GetAxis("Vertical");
+            float cancel = 0;//Input.GetAxis("Vertical");
             if (submit > 0)
             {
                 OnSubmit();
