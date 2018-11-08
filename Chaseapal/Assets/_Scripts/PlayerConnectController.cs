@@ -13,14 +13,20 @@ public class PlayerConnectController : MonoBehaviour {
     bool isInTransition = true;
     float timer;
 
-    public int selected;
-    public int maxSizeOfSelected = 1;
+    public GameObject[] players;
+    SelectColor[] playersSelectColor;
 
+    bool[] colorTaken = { false,false,false,false}; // 0 = green 1 = Red
     // Use this for initialization
     void Start()
     {
         stateOfCamera = mainCamera.GetComponent<SetAnimatiorStates>();
         level = LevelSelector.GetComponent<LevelSelectMenuController>();
+        playersSelectColor = new SelectColor[players.Length];
+        for (int i = 0; i < playersSelectColor.Length; i++)
+        {
+            playersSelectColor[i] = players[i].GetComponent<SelectColor>();
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +36,7 @@ public class PlayerConnectController : MonoBehaviour {
         {
             float x = Input.GetAxis("Horizontal");
             float submit = Input.GetAxis("Submit");
-            float cancel = Input.GetAxis("Cancel");
+            float cancel = Input.GetAxis("Vertical");
             if (submit > 0)
             {
                 OnSubmit();
@@ -53,11 +59,101 @@ public class PlayerConnectController : MonoBehaviour {
                 OnLeft();
                 timer = 0;
             }
+            for (int i = 0; i < 4; i++)
+            {
+                if (!playersSelectColor[i].spawn)
+                {
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 0") > 0 && !colorTaken[0])
+                    {
+                        playersSelectColor[i].spawn = true;
+                        if (playersSelectColor[i].color.Length == 0)
+                        {
+                            playersSelectColor[i].color = "green";
+                        }
+                        colorTaken[0] = true;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 1") > 0 && !colorTaken[1])
+                    {
+                        playersSelectColor[i].spawn = true;
+                        if (playersSelectColor[i].color.Length == 0)
+                        {
+                            playersSelectColor[i].color = "red";
+                        }
+                        colorTaken[1] = true;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 2") > 0 && !colorTaken[2])
+                    {
+                        playersSelectColor[i].spawn = true;
+                        if (playersSelectColor[i].color.Length == 0)
+                        {
+                            playersSelectColor[i].color = "blue";
+                        }
+                        colorTaken[2] = true;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 3") > 0 && !colorTaken[3])
+                    {
+                        playersSelectColor[i].spawn = true;
+                        if (playersSelectColor[i].color.Length == 0)
+                        {
+                            playersSelectColor[i].color = "yellow";
+                        }
+                        colorTaken[3] = true;
+                        timer = 0;
+                    }
+
+                    if (playersSelectColor[i].spawn)
+                    {
+                        playersSelectColor[i].spawnDino();
+                    }
+                    
+                }
+                else
+                {
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 0") > 0 && colorTaken[0] && playersSelectColor[i].color == "green")
+                    {
+                        playersSelectColor[i].spawn = false;
+                        playersSelectColor[i].color = "";
+                        playersSelectColor[i].killDino();
+                        colorTaken[0] = false;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 1") > 0 && colorTaken[1] && playersSelectColor[i].color == "red")
+                    {
+                        playersSelectColor[i].spawn = false;
+                        playersSelectColor[i].color = "";
+                        playersSelectColor[i].killDino();
+                        colorTaken[1] = false;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 2") > 0 && colorTaken[2] && playersSelectColor[i].color == "blue")
+                    {
+                        playersSelectColor[i].spawn = false;
+                        playersSelectColor[i].color = "";
+                        playersSelectColor[i].killDino();
+                        colorTaken[2] = false;
+                        timer = 0;
+                    }
+                    if (Input.GetAxis("p" + (i + 1) + "_Button 3") > 0 && colorTaken[3] && playersSelectColor[i].color == "yellow")
+                    {
+                        playersSelectColor[i].spawn = false;
+                        playersSelectColor[i].color = "";
+                        playersSelectColor[i].killDino();
+                        colorTaken[3] = false;
+                        timer = 0;
+                    }
+                }
+            }
+            
             
 
         }
         timer += Time.deltaTime;
     }
+
+
     void OnSubmit()
     {
         SceneManager.LoadScene(level.GetSelectedLevel());

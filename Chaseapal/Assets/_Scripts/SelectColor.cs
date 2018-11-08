@@ -6,7 +6,8 @@ public class SelectColor : MonoBehaviour {
 
     public string color = "blue";
     public int playerNumber;
-
+    public bool spawn;
+    bool dinoIsSpawned;
     public GameObject blueDino;
     public GameObject greenDino;
     public GameObject redDino;
@@ -15,12 +16,26 @@ public class SelectColor : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        if (spawn && !dinoIsSpawned)
+        {
+            spawnDino();
+        }
+        
+	}
+    private void Update()
+    {
+        if(spawn && !dinoIsSpawned)
+        {
+            spawnDino();
+        }
+    }
+    public void spawnDino()
+    {
         color.ToLower();
         switch (color)
         {
             case "blue":
-               Instantiate(blueDino,gameObject.transform);
+                Instantiate(blueDino, gameObject.transform);
                 break;
             case "green":
                 Instantiate(greenDino, gameObject.transform);
@@ -32,9 +47,23 @@ public class SelectColor : MonoBehaviour {
                 Instantiate(yellowDino, gameObject.transform);
                 break;
             default:
-               Instantiate(blueDino, gameObject.transform);
+                Instantiate(blueDino, gameObject.transform);
                 break;
         }
-        
-	}
+        dinoIsSpawned = true;
+    }
+    public void killDino()
+    {
+        foreach (Transform child in transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
+    public void changeColor()
+    {
+        foreach(Transform child in transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        spawnDino();
+    }
 }

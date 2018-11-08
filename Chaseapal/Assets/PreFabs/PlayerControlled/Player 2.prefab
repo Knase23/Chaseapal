@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4332574355904196
 Transform:
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88eff20ce031a4c438814fb57c13100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: p2_Jump
+  jumpButton: p2_Button 0
   isJumping: 0
 --- !u!114 &114261773794637150
 MonoBehaviour:
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: green
   playerNumber: 1
+  spawn: 0
   blueDino: {fileID: 1032018740437026, guid: ca0cf4ad0a1768f46b5896bd93884908, type: 2}
   greenDino: {fileID: 1720731708366020, guid: a1b34fa2e17fc0645aacf901d8f0ac24, type: 2}
   redDino: {fileID: 1840457976979806, guid: f69b0adda48304941a14e70d3f18b0aa, type: 2}
