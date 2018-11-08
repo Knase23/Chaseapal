@@ -7,7 +7,8 @@ public class SelectColor : MonoBehaviour {
     public string color = "blue";
     public int playerNumber;
     public bool spawn;
-    bool dinoIsSpawned;
+    public bool dinoIsSpawned;
+    public bool ignoreGlobalPlayers;
     public GameObject blueDino;
     public GameObject greenDino;
     public GameObject redDino;
@@ -16,9 +17,20 @@ public class SelectColor : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        if(!ignoreGlobalPlayers)
+        {
+            color = SpawnPlayers.arrayOfSelectedColors[playerNumber];
+            spawn = SpawnPlayers.arrayOfShouldSpawn[playerNumber];
+        }
+        
+
         if (spawn && !dinoIsSpawned)
         {
             spawnDino();
+        } else
+        {
+            GetComponent<Movement>().enabled = false;
+            GetComponent<Jump>().enabled = false;
         }
         
 	}
@@ -27,8 +39,10 @@ public class SelectColor : MonoBehaviour {
         if(spawn && !dinoIsSpawned)
         {
             spawnDino();
+            Debug.Log("Spawning Dino");
         }
     }
+
     public void spawnDino()
     {
         color.ToLower();
@@ -50,6 +64,7 @@ public class SelectColor : MonoBehaviour {
                 Instantiate(blueDino, gameObject.transform);
                 break;
         }
+        SpawnPlayers.arrayOfSelectedColors[playerNumber] = color;
         dinoIsSpawned = true;
     }
     public void killDino()
@@ -58,6 +73,7 @@ public class SelectColor : MonoBehaviour {
         {
             GameObject.Destroy(child.gameObject);
         }
+        SpawnPlayers.arrayOfSelectedColors[playerNumber] = "";
     }
     public void changeColor()
     {

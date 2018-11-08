@@ -28,6 +28,13 @@ public class PlayerConnectController : MonoBehaviour {
             playersSelectColor[i] = players[i].GetComponent<SelectColor>();
         }
     }
+    private void Awake()
+    {
+        bool[] boolArray = { false, false, false, false };
+        string[] stringArray = { "", "", "", "" };
+        SpawnPlayers.arrayOfSelectedColors = stringArray;
+        SpawnPlayers.arrayOfShouldSpawn = boolArray;
+    }
 
     // Update is called once per frame
     void Update()
@@ -156,7 +163,16 @@ public class PlayerConnectController : MonoBehaviour {
 
     void OnSubmit()
     {
+        for (int i = 0; i < playersSelectColor.Length; i++)
+        {
+            
+            SpawnPlayers.arrayOfSelectedColors[i] = playersSelectColor[i].color;
+            SpawnPlayers.arrayOfShouldSpawn[i] = playersSelectColor[i].dinoIsSpawned;
+
+
+        }        
         SceneManager.LoadScene(level.GetSelectedLevel());
+
     }
     void OnRight()
     {
@@ -168,6 +184,10 @@ public class PlayerConnectController : MonoBehaviour {
     }
     void OnCancel()
     {
+        for (int i = 0; i < playersSelectColor.Length; i++)
+        {
+            playersSelectColor[i].killDino();
+        }
         stateOfCamera.SetState("LevelSelect", true);
     }
     private void OnBecameVisible()
