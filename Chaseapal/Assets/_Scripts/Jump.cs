@@ -7,11 +7,18 @@ public class Jump : MonoBehaviour {
     // Håller koll på att hoppa
     public string jumpButton = "Jump";
 
+    public AudioClip jump1;
+    public AudioSource jumpPlayer1Sound;
+
     Rigidbody2D Rb2d;
     float jumpMaxTime;
     float jumpTime;
     float jumpPower;
     public bool isJumping;
+
+    private void Start() {
+        jumpPlayer1Sound.clip = jump1;
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +32,7 @@ public class Jump : MonoBehaviour {
         if (Input.GetButtonDown(jumpButton) && !isJumping)
         {
             isJumping = true;
+            jumpPlayer1Sound.Play();
             jumpMaxTime = Time.time + 0.55f;
             jumpTime = 0;
             jumpPower = 1.0f;
