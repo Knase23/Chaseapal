@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour {
 
-    public static int[] pointsList = { 100, 300, 1000, 1 };
+    public static int[] pointsList = { 1, 1, 1, 1 };
+   
 	// Use this for initialization
 	void Start () {
-        //pointsList = new int[4];
+        
         
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
     public static void AddPointToPlayer(int playerNumber)
     {
         pointsList[playerNumber]++;
+    }
+
+    public void ResetScore() {
+        for(int i = 0; i < 4; i++) {
+            pointsList[i] = 0;
+        }
     }
 
 }

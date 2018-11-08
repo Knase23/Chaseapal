@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MenyLoad : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public ScoreSystem score;
+
+    // Use this for initialization
+    void Start () {
+         
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetAxis("Submit") > 0) {
+            //score.ResetScore();
             SceneManager.LoadScene("Menu");
         }
 	}
