@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GetColor : MonoBehaviour {
 
-    Color color;
+    public Color color;
+    public SpriteRenderer otherSprite;
     SpriteRenderer sprite;
   
     void Start() {
@@ -13,7 +14,7 @@ public class GetColor : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        color = GetComponentInParent<SpriteRenderer>().color;
+        color = otherSprite.color;
         sprite.color = color;
     }
 }
