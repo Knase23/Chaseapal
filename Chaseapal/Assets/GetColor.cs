@@ -14,6 +14,6 @@ public class GetColor : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         color = GetComponentInParent<SpriteRenderer>().color;
-        sprite.color = color
+        sprite.color = color;
     }
 }
