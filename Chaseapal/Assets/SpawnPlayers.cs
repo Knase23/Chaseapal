@@ -26,4 +26,16 @@ public class SpawnPlayers : MonoBehaviour {
         }
         
     }
+    public int GetNumberOfPlayers()
+    {
+        int counter = 0;
+        foreach (bool shouldExist in arrayOfShouldSpawn)
+        {
+            if(shouldExist)
+            {
+                counter++;
+            }
+        }
+        return counter;
+    }
 }
