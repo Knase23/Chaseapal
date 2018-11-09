@@ -33,13 +33,13 @@ public class LevelSelectMenuController : MonoBehaviour {
                 isInTransition = true;
                 timer = 0;
             }
-            if (x > 0)
+            if (x > 0 || Input.GetKey(KeyCode.RightArrow))
             {
                 OnRight();
                 animator.SetInteger("LevelSelected", selected);
                 timer = 0;
             }
-            if (x < 0)
+            if (x < 0 || Input.GetKey(KeyCode.LeftArrow))
             {
                 OnLeft();
                 animator.SetInteger("LevelSelected", selected);

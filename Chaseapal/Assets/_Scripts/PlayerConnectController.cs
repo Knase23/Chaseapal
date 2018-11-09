@@ -50,7 +50,7 @@ public class PlayerConnectController : MonoBehaviour {
                 isInTransition = true;
                 timer = 0;
             }
-            if(cancel > 0)
+            if (cancel > 0 || Input.GetKey(KeyCode.C)) 
             {
                 OnCancel();
                 isInTransition = true;
