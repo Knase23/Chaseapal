@@ -6,9 +6,12 @@ public class ColorVar : MonoBehaviour {
 
     public Color color;
     public int playerNumber;
-
+    public bool enablePlayerNumber = true;
     private void Start()
     {
-        playerNumber = GetComponentInParent<SelectColor>().playerNumber;
+        if (enablePlayerNumber)
+        {
+            playerNumber = GetComponentInParent<SelectColor>().playerNumber;
+        }
     }
 }

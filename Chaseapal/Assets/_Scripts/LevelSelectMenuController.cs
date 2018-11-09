@@ -55,7 +55,7 @@ public class LevelSelectMenuController : MonoBehaviour {
     }
     void OnRight()
     {
-        if(selected < levels.Length)
+        if(selected < levels.Length - 1)
         {
             selected++;
         }
