@@ -7,17 +7,16 @@ public class Jump : MonoBehaviour {
     // Håller koll på att hoppa
     public string jumpButton = "Jump";
     public float gravityScale = 5;
-    public AudioClip jump1;
-    public AudioSource jumpPlayer1Sound;
 
     Rigidbody2D Rb2d;
+    AudioSource jumpSound;
     float jumpMaxTime;
     float jumpTime;
     float jumpPower;
     public bool isJumping;
 
     private void Start() {
-        jumpPlayer1Sound.clip = jump1;
+        
     }
 
     // Update is called once per frame
@@ -29,11 +28,15 @@ public class Jump : MonoBehaviour {
             Rb2d.gravityScale = gravityScale;
             
         }
+        if(jumpSound == null)
+        {
+            jumpSound = GetComponentInChildren<AudioSource>();
+        }
 
         if (Input.GetButtonDown(jumpButton) && !isJumping)
         {
             isJumping = true;
-            jumpPlayer1Sound.Play();
+            jumpSound.Play();
             jumpMaxTime = Time.time + 0.55f;
             jumpTime = 0;
             jumpPower = 1.0f;

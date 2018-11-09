@@ -678,9 +678,10 @@ Prefab:
     - target: {fileID: 114102175843632390, guid: 7f0bd36b880217d4c8df5b3983d62f13,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82004606990206594, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7f0bd36b880217d4c8df5b3983d62f13, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &362204677
@@ -1302,9 +1303,10 @@ Prefab:
     - target: {fileID: 114833071189543330, guid: f31d5b34352ced24b9cfa39b3c45da7c,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82303737444886374, guid: f31d5b34352ced24b9cfa39b3c45da7c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f31d5b34352ced24b9cfa39b3c45da7c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &580874678
@@ -1359,9 +1361,10 @@ Prefab:
     - target: {fileID: 114422238127155976, guid: ad82291a636833546a2098cc3c8fd11f,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82601094325938326, guid: ad82291a636833546a2098cc3c8fd11f, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: ad82291a636833546a2098cc3c8fd11f, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &606220822
@@ -3061,9 +3064,10 @@ Prefab:
     - target: {fileID: 114349642909559514, guid: 0033dd4e253e2ef49b763fb442c3e86b,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82419783339401492, guid: 0033dd4e253e2ef49b763fb442c3e86b, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0033dd4e253e2ef49b763fb442c3e86b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1040415382 stripped
@@ -3333,7 +3337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d74afb425650514a9bef79b210ca114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 0}
 --- !u!1 &1208429742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3794,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82439618215438120, guid: 16b97c2376d102e439ac30267c85d98b, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 16b97c2376d102e439ac30267c85d98b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1315577039
