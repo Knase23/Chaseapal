@@ -192,12 +192,12 @@ public class PlayerConnectController : MonoBehaviour {
     }
     private void OnBecameVisible()
     {
-        Debug.Log("I am Visible");
+
         isVisible = true;
     }
     private void OnBecameInvisible()
     {
-        Debug.Log("LevelSelect POOOF");
+
         isVisible = false;
         isInTransition = false;
     }

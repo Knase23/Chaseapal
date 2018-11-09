@@ -14,15 +14,15 @@ public class SpawnPlayers : MonoBehaviour {
             arrayOfSelectedColors[i] = "";
             arrayOfShouldSpawn[i] = false;
         }
-        Debug.Log("Clean Static Array");
+        //Debug.Log("Clean Static Array");
 
     }
     public void ShowContent()
     {
         for (int i = 0; i < 4; i++)
         {
-            Debug.Log("Player 1:" + arrayOfSelectedColors[i]);
-            Debug.Log("Player 1 Should Spawn:" + arrayOfShouldSpawn[i]);
+            //Debug.Log("Player 1:" + arrayOfSelectedColors[i]);
+           // Debug.Log("Player 1 Should Spawn:" + arrayOfShouldSpawn[i]);
         }
         
     }

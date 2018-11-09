@@ -36,7 +36,7 @@ public class Jump : MonoBehaviour {
         if (Input.GetButtonDown(jumpButton) && !isJumping)
         {
             isJumping = true;
-            jumpSound.Play();
+            jumpSound.PlayOneShot(jumpSound.clip);
             jumpMaxTime = Time.time + 0.55f;
             jumpTime = 0;
             jumpPower = 1.0f;

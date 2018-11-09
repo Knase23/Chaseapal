@@ -16,7 +16,7 @@ public class Show2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(level.GetSelectedLevel());
+        //Debug.Log(level.GetSelectedLevel());
 
         if (level.GetSelectedLevel() == "Level4") {
             text.enabled = false;

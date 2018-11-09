@@ -77,12 +77,12 @@ public class LevelSelectMenuController : MonoBehaviour {
     }
     private void OnBecameVisible()
     {
-        Debug.Log("I am Visible");
+        //Debug.Log("I am Visible");
         isVisible = true;
     }
     private void OnBecameInvisible()
     {
-        Debug.Log("LevelSelect POOOF");
+        //Debug.Log("LevelSelect POOOF");
         isVisible = false;
     }
 

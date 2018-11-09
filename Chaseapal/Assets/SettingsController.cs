@@ -121,12 +121,12 @@ public class SettingsController : MonoBehaviour {
     }
     private void OnBecameVisible()
     {
-        Debug.Log("SettingsController Visable");
+       // Debug.Log("SettingsController Visable");
         isVisible = true;
     }
     private void OnBecameInvisible()
     {
-        Debug.Log("SettingsController Visable");
+        //Debug.Log("SettingsController Visable");
         isVisible = false;
     }
 }

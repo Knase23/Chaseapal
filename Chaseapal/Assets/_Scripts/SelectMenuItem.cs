@@ -31,7 +31,7 @@ public class SelectMenuItem : MonoBehaviour {
 
             if (Input.GetAxis("Submit") > 0)
             {
-                Debug.Log("Submited to " + enterToView);
+                
                 animateController.SetBool("Selected", true);
                 changeStatesTo.SetState(enterToView, true);
                 isInTransition = true;
@@ -40,7 +40,7 @@ public class SelectMenuItem : MonoBehaviour {
 
             if (Input.GetAxis("Cancel") > 0)
             {
-                Debug.Log("Cancel to " + cancelToView);
+                
                 animateController.SetBool("Selected", false);
                 changeStatesTo.SetState(cancelToView, true);
                 isInTransition = true;

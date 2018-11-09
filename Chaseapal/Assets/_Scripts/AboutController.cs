@@ -28,7 +28,6 @@ public class AboutController : MonoBehaviour {
             float cancel = Input.GetAxis("Cancel");
             if (submit > 0)
             {
-                Debug.Log("I Want To GOOO");
                 OnSubmit();
                 isInTransition = true;
                 timer = 0;

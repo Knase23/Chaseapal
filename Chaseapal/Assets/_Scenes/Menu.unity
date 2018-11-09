@@ -4098,7 +4098,6 @@ GameObject:
   - component: {fileID: 1200214242}
   - component: {fileID: 1200214241}
   - component: {fileID: 1200214240}
-  - component: {fileID: 1200214244}
   m_Layer: 5
   m_Name: LevelSelectCanvas
   m_TagString: Untagged
@@ -4182,17 +4181,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -14}
   m_SizeDelta: {x: 1140, y: 641}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1200214244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1200214239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d74afb425650514a9bef79b210ca114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1208429742
 GameObject:
   m_ObjectHideFlags: 0

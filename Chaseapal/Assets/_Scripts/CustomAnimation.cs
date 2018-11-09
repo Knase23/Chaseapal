@@ -11,7 +11,7 @@ public class CustomAnimation : MonoBehaviour {
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
-        
+        sound = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class CustomAnimation : MonoBehaviour {
         {
             parentJump = GetComponentInParent<Jump>();
         }
-        parentJump.isJumping = false;
+        parentJump.isJumping = false;        
 
     }
 }
