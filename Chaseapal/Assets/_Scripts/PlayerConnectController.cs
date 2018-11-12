@@ -123,7 +123,7 @@ public class PlayerConnectController : MonoBehaviour {
                     {
                         playersSelectColor[i].spawn = false;
                         playersSelectColor[i].color = "";
-                        playersSelectColor[i].killDino();
+                        playersSelectColor[i].KillDino();
                         colorTaken[0] = false;
                         timer = 0;
                     }
@@ -131,7 +131,7 @@ public class PlayerConnectController : MonoBehaviour {
                     {
                         playersSelectColor[i].spawn = false;
                         playersSelectColor[i].color = "";
-                        playersSelectColor[i].killDino();
+                        playersSelectColor[i].KillDino();
                         colorTaken[1] = false;
                         timer = 0;
                     }
@@ -139,7 +139,7 @@ public class PlayerConnectController : MonoBehaviour {
                     {
                         playersSelectColor[i].spawn = false;
                         playersSelectColor[i].color = "";
-                        playersSelectColor[i].killDino();
+                        playersSelectColor[i].KillDino();
                         colorTaken[2] = false;
                         timer = 0;
                     }
@@ -147,20 +147,15 @@ public class PlayerConnectController : MonoBehaviour {
                     {
                         playersSelectColor[i].spawn = false;
                         playersSelectColor[i].color = "";
-                        playersSelectColor[i].killDino();
+                        playersSelectColor[i].KillDino();
                         colorTaken[3] = false;
                         timer = 0;
                     }
                 }
             }
-            
-            
-
         }
         timer += Time.deltaTime;
     }
-
-
     void OnSubmit()
     {
         for (int i = 0; i < playersSelectColor.Length; i++)
@@ -168,8 +163,6 @@ public class PlayerConnectController : MonoBehaviour {
             
             SpawnPlayers.arrayOfSelectedColors[i] = playersSelectColor[i].color;
             SpawnPlayers.arrayOfShouldSpawn[i] = playersSelectColor[i].dinoIsSpawned;
-
-
         }        
         SceneManager.LoadScene(level.GetSelectedLevel());
 
@@ -186,18 +179,16 @@ public class PlayerConnectController : MonoBehaviour {
     {
         for (int i = 0; i < playersSelectColor.Length; i++)
         {
-            playersSelectColor[i].killDino();
+            playersSelectColor[i].KillDino();
         }
         stateOfCamera.SetState("LevelSelect", true);
     }
     private void OnBecameVisible()
     {
-
         isVisible = true;
     }
     private void OnBecameInvisible()
     {
-
         isVisible = false;
         isInTransition = false;
     }

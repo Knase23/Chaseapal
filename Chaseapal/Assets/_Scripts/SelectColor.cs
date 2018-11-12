@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectColor : MonoBehaviour {
 
-    public string color = "blue";
+    public string color;
     public int playerNumber;
     public bool spawn;
     public bool dinoIsSpawned;
@@ -70,15 +70,16 @@ public class SelectColor : MonoBehaviour {
         }
             dinoIsSpawned = true;
     }
-    public void killDino()
+    public void KillDino()
     {
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
         }
+        dinoIsSpawned = false;
         SpawnPlayers.arrayOfSelectedColors[playerNumber] = "";
     }
-    public void changeColor()
+    public void ChangeColor()
     {
         foreach(Transform child in transform) {
             GameObject.Destroy(child.gameObject);
