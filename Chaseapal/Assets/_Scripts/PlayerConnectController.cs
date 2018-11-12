@@ -158,13 +158,22 @@ public class PlayerConnectController : MonoBehaviour {
     }
     void OnSubmit()
     {
+        int numberOfActivePlayers = 0;
         for (int i = 0; i < playersSelectColor.Length; i++)
         {
             
             SpawnPlayers.arrayOfSelectedColors[i] = playersSelectColor[i].color;
             SpawnPlayers.arrayOfShouldSpawn[i] = playersSelectColor[i].dinoIsSpawned;
-        }        
-        SceneManager.LoadScene(level.GetSelectedLevel());
+            if(SpawnPlayers.arrayOfShouldSpawn[i])
+            {
+                numberOfActivePlayers++;
+            }
+        }
+        if(numberOfActivePlayers > 1)
+        {
+            SceneManager.LoadScene(level.GetSelectedLevel());
+        }
+       
 
     }
     void OnRight()

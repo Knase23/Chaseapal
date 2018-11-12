@@ -5450,7 +5450,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: -80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6283,11 +6283,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "A multiplayer platform game for 2 \u2013 4 players. You choose between
-    colored characters and fight for tiles you run on. Every tile that is your color
-    and vanish, you get 1 point. You can also take other playertiles by running on
-    them after they leave them. If you jump on a player he stuns for awhile and cannot
-    move.\r\n\r\nNow get on with it and start fighting for tiles!\r\n"
+  m_Text: "A multiplayer 2D platform game for 2 \u2013 4 players. You choose between
+    a set of colored characters and fight for the tiles you run on. Every tile that
+    is your color and vanish, you get 1 point. You can also take other playertiles
+    by running on them after they leave them. If you jump on a player he gets stunned
+    and cannot move for awhile.\r\n\r\nNow get on with it and start fighting for tiles!\r\n"
 --- !u!222 &1941126269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6555,7 +6555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1645528396}
-  offset: 90
+  offset: 80
 --- !u!114 &1965558789
 MonoBehaviour:
   m_ObjectHideFlags: 0
